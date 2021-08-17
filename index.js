@@ -44,12 +44,12 @@ Use the higher-order function called getYears to do the following:
 2. Receive a callback function getFinals from task 2 
 3. Return an array called years containing all of the years in the getFinals data set*/
 // param data which will be fifaData when you invoke it, getFinalscb you will pass in getFinals when you invoke
-function getYears(array, getFinalsCB) {
-    const year = getFinalsCB[array].map(function(item){
+function getYears(getFinalscb) {
+    const years = getFinalscb.map(function(item){
         return item.Year
     });
-    return years;
-    //map over the getfinalsCB and return the years (item.year)
+    return years
+    //map over the getfinalscb and return the years (item.year)
     /* code here */
 }
 
